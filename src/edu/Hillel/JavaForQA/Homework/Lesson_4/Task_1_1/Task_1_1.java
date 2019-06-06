@@ -5,25 +5,23 @@ import java.time.LocalDate;
 
 public class Task_1_1 {
 
+//
+//(1 point) Write a java program which print in console what day of the week is today.
+// Use Enum with list of days.
+//
 
-  static MyDay day;
 
-    @Override
-    public String toString() {
-        return "" + day;
-    }
-
-    public static String todayIs(){
+    public static int todayIs(){
         DayOfWeek today = LocalDate.now().getDayOfWeek();
-        String todayIs = today.name();
+        int todayIs = today.getValue();
         return todayIs;
     }
 
 
 
-
-
     public static void main(String[] args) {
+
+        System.out.println("Today is " + MyDay.getDay(todayIs()));
 
 
 
