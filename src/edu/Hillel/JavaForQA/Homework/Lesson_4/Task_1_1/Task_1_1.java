@@ -17,13 +17,9 @@ public class Task_1_1 {
         return todayIs;
     }
 
-
-
     public static void main(String[] args) {
 
         System.out.println("Today is " + MyDay.getDay(todayIs()));
-
-
 
     }
 }

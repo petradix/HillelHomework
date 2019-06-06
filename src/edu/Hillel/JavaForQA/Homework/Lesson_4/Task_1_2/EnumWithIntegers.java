@@ -38,7 +38,6 @@ public enum EnumWithIntegers {
         this.myValue = value;
     }
 
-
     public int getMyValue() {
         return myValue;
     }

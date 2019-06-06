@@ -8,9 +8,7 @@ public class HappyNum {
 
     public static void main(String[] args) {
 
-
         System.out.println(textNumbers(Arrays.asList("13", "31"), 2));
-
 
     }
 
