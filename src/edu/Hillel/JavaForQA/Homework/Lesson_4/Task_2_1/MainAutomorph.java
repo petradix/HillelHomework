@@ -19,10 +19,10 @@ public class MainAutomorph {
 
         int num = sc.nextInt();
 
-        int sq_num = num * num;
+        long sq_num = num * num;
 
         String str_num = Integer.toString(num);
-        String squareOfNum = Integer.toString(sq_num);
+        String squareOfNum = Long.toString(sq_num);
 
         if (squareOfNum.endsWith(str_num)) {
             System.out.format("Number %d is Automorphic Number.", num);

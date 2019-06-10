@@ -8,13 +8,16 @@ public class HappyNum {
 
     public static void main(String[] args) {
 
-        System.out.println(textNumbers(Arrays.asList("13", "31"), 2));
+        System.out.println(textNumbers(Arrays.asList("33", "2424"), 10));
+
 
     }
 
     public static List<String> textNumbers(List<String> values, int tryNum) {
 
+
         if (values.size() <= 1 || tryNum == 0) {
+
             return values;
         }
 
@@ -27,7 +30,8 @@ public class HappyNum {
 
         }
 
-        System.out.println(result);
+        //System.out.print("First 8 Happy numbers: ");
+        System.out.print(result + " ");
 
         return textNumbers(
                 Arrays.asList(
