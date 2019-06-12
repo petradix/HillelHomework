@@ -1,6 +1,44 @@
 package edu.Hillel.JavaForQA.Homework.Lesson_5.Task_2_3;
 
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class MouseMap {
+
+        private int mouseNumber;
+
+        MouseMap(int mouseNumber) {
+            this.mouseNumber = mouseNumber;
+        }
+
+        public static void main(String[] args) {
+            Map<String, MouseMap> mouseMap = new HashMap<>();
+            mouseMap.put("Fuzzy", new MouseMap(3));
+            mouseMap.put("Spot", new MouseMap(5));
+
+            Iterator<String> iterator = mouseMap.keySet().iterator();
+            while (iterator.hasNext()) {
+                String key = iterator.next();
+                System.out.println("Key = " + key + ", Value = " + mouseMap.get(key));
+            }
+
+            System.out.println("Change to LinkedHashMap: ");
+            mouseMap = new LinkedHashMap<>();
+            mouseMap.put("Fuzzy", new MouseMap(3));
+            mouseMap.put("Spot", new MouseMap(5));
+
+            iterator = mouseMap.keySet().iterator();
+            while (iterator.hasNext()) {
+                String key = iterator.next();
+                System.out.println("Key = " + key + ", Value = " + mouseMap.get(key));
+            }
+        }
+
+        void hop() {
+            System.out.println("mouseNumber = " + mouseNumber);
+        }
 }
 
 
