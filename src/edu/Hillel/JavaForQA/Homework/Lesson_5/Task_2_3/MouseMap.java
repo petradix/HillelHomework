@@ -7,41 +7,37 @@ import java.util.Map;
 
 public class MouseMap {
 
-        private int mouseNumber;
+    private int mouseNumber;
 
-        MouseMap(int mouseNumber) {
-            this.mouseNumber = mouseNumber;
+    MouseMap(int mouseNumber) {
+        this.mouseNumber = mouseNumber;
+    }
+
+    public static void main(String[] args) {
+        Map<String, MouseMap> mouseMap = new HashMap<>();
+        mouseMap.put("Small", new MouseMap(3));
+        mouseMap.put("Toll", new MouseMap(5));
+
+        Iterator<String> iterator = mouseMap.keySet().iterator();
+        while (iterator.hasNext()) {
+            String key = iterator.next();
+            System.out.println("Key = " + key + ", Value = " + mouseMap.get(key));
         }
 
-        public static void main(String[] args) {
-            Map<String, MouseMap> mouseMap = new HashMap<>();
-            mouseMap.put("Fuzzy", new MouseMap(3));
-            mouseMap.put("Spot", new MouseMap(5));
+        System.out.println("\nGo through the Map with Iterator:");
 
-            Iterator<String> iterator = mouseMap.keySet().iterator();
-            while (iterator.hasNext()) {
-                String key = iterator.next();
-                System.out.println("Key = " + key + ", Value = " + mouseMap.get(key));
-            }
-
-            System.out.println("Change to LinkedHashMap: ");
-            mouseMap = new LinkedHashMap<>();
-            mouseMap.put("Fuzzy", new MouseMap(3));
-            mouseMap.put("Spot", new MouseMap(5));
-
-            iterator = mouseMap.keySet().iterator();
-            while (iterator.hasNext()) {
-                String key = iterator.next();
-                System.out.println("Key = " + key + ", Value = " + mouseMap.get(key));
-            }
+        iterator = mouseMap.keySet().iterator();
+        while (iterator.hasNext()) {
+            String key = iterator.next();
+            System.out.println("Key = " + key);
+            hop(key);
         }
+    }
 
-        void hop() {
-            System.out.println("mouseNumber = " + mouseNumber);
-        }
+    static void hop(String textKey) {
+        System.out.println(textKey + " mouse is hopping");
+    }
 }
-
-
 
 
 //(3 points) Modify Exercise 2 so you use an Iterator to move through the List while calling hop( ).

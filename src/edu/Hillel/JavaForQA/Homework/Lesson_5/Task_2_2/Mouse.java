@@ -4,10 +4,12 @@ public class Mouse {
 
     public static int counter = 1;
     public final int mouseNumber;
-    public Mouse(){
+
+    public Mouse() {
         mouseNumber = counter++;
     }
-    void hop(){
+
+    void hop() {
         System.out.println("Mouse #" + mouseNumber + " is hopping!");
     }
 }

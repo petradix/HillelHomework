@@ -4,19 +4,19 @@ import java.util.*;
 
 public class HashMapper {
     HashMap<Integer, String> map = new HashMap<Integer, String>();
-    LinkedHashMap<Integer, String> linkedmap = new LinkedHashMap<Integer, String>();
+    LinkedHashMap<Integer, String> linkedHashMap = new LinkedHashMap<Integer, String>();
 
-    public void fillMap(){
+    public void fillHashMap() {
         Random rand = new Random(42);
-        int k;
-        for (int i=0; i<10; i++){
-            k = rand.nextInt(i+20);
-            map.put(k, Integer.toString(k));
+        int key;
+        for (int i = 0; i < 10; i++) {
+            key = rand.nextInt(i + 20);
+            map.put(key, Integer.toString(key));
         }
         System.out.println("Hash code order: " + map);
     }
 
-    public void remap(){
+    public void remap() {
         Set<Integer> keyset = map.keySet();
         Iterator<Integer> it;
         int temp;
@@ -26,14 +26,14 @@ public class HashMapper {
             it = keyset.iterator();
             smallest = it.next();
             it = keyset.iterator();
-            while(it.hasNext()) {
+            while (it.hasNext()) {
                 temp = it.next();
                 if (temp < smallest) smallest = temp;
             }
-            linkedmap.put(smallest, map.get(smallest));
+            linkedHashMap.put(smallest, map.get(smallest));
             keyset.remove(smallest);
         }
-        System.out.println("Sorted (insertion order): " + linkedmap);
+        System.out.println("Sorted (insertion order): " + linkedHashMap);
     }
 }
 

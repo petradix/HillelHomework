@@ -1,11 +1,13 @@
 package edu.Hillel.JavaForQA.Homework.Lesson_5.Task_1_4;
 
-class ResumerException extends Exception {}
-
 class Resumer {
-    static int count = 3;
-    void f() throws ResumerException {
-        if(--count > 0)
-            throw new ResumerException();
+    static int amountOfExceptions = 5;
+
+    void goThroughExeptions() throws MyException {
+        if (amountOfExceptions-- > 0)
+            throw new MyException();
     }
+}
+
+class MyException extends Exception {
 }

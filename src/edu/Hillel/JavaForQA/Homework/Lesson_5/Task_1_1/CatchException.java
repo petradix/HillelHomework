@@ -3,6 +3,7 @@ package edu.Hillel.JavaForQA.Homework.Lesson_5.Task_1_1;
 public class CatchException {
 
     public static void main(String[] args) {
+
         try {
             throw new UnsupportedOperationException("Oh my God! It is a disaster!");
         } catch (UnsupportedOperationException e) {

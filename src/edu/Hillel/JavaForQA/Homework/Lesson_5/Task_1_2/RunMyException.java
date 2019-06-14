@@ -1,22 +1,18 @@
 package edu.Hillel.JavaForQA.Homework.Lesson_5.Task_1_2;
 
 
+public class RunMyException {
 
-public class MyOwnException {
-
-
-    public static void main(String[] args){
-
+    public static void main(String[] args) {
 
         try {
 
             throw new MyException("Voldemort");
 
         } catch (MyException e) {
-            e.printMsg();
+            e.catchMessage();
 
-        }
-        finally {
+        } finally {
             System.out.println("Fear of a name only increases fear of the thing itself!");
         }
 

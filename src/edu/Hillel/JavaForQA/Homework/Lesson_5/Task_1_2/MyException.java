@@ -1,6 +1,6 @@
 package edu.Hillel.JavaForQA.Homework.Lesson_5.Task_1_2;
 
-public class MyException extends Exception{
+public class MyException extends Exception {
 
     String exceptionText;
 
@@ -8,7 +8,7 @@ public class MyException extends Exception{
         this.exceptionText = exceptionText;
     }
 
-    public void printMsg() {
+    public void catchMessage() {
         if (exceptionText == "Voldemort") {
             System.out.println("We do not speak his name!");
         } else {
