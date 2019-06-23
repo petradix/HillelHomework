@@ -2,7 +2,7 @@ package edu.Hillel.JavaForQA.Homework.Lesson_5.Task_2_1;
 
 import java.util.*;
 
-public class inputDoublesToArrays {
+public class InputDoublesToArrays {
 
     public static String toString(double[] doubleItem) {
         StringBuffer result = new StringBuffer("[");

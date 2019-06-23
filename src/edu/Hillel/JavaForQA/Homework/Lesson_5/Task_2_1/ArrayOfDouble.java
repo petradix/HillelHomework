@@ -5,8 +5,8 @@ public class ArrayOfDouble {
 
     public static void main(String[] args) {
         double[] doubleArray = new double[10];
-        inputDoublesToArrays.fill(doubleArray, new inputDoublesToArrays.RandDoubleGenerator());
-        System.out.println(inputDoublesToArrays.toString(doubleArray));
+        InputDoublesToArrays.fill(doubleArray, new InputDoublesToArrays.RandDoubleGenerator());
+        System.out.println(InputDoublesToArrays.toString(doubleArray));
 
     }
 }
