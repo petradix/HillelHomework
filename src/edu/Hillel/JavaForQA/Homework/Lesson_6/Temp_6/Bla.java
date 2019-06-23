@@ -1,4 +1,4 @@
-package edu.Hillel.JavaForQA.Homework.Lesson_6.Task_3_1;
+package edu.Hillel.JavaForQA.Homework.Lesson_6.Temp_6;
 
 import java.util.Arrays;
 import java.util.List;

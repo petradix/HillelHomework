@@ -1,6 +1,6 @@
 package edu.Hillel.JavaForQA.Homework.Lesson_6.Task_3_1;
 
- class DataObject {
+ public class DataObject {
 
     private  String title;
     private  String developer;

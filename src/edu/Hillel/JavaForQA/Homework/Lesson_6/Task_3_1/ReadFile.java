@@ -10,9 +10,6 @@ public class ReadFile {
 
     public static void main(String[] args) {
 
-//        Scanner in = new Scanner(System.in);
-//
-//        System.out.print("Enter the name of the file to open:");
         String fileName = "/Users/phubskii/IdeaProjects/Hillel_Home/src/edu/Hillel/JavaForQA/Homework/Lesson_6/Task_3_1/file.txt";
 
         BufferedReader reader;
@@ -53,14 +50,11 @@ public class ReadFile {
             dataObject.setYear(row.get(3));
             dataObject.setPrice(row.get(4));
 
-
             result.add(dataObject);
         }
 
         return result;
     }
-
-
 
 }
 
