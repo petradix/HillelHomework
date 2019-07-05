@@ -21,9 +21,6 @@ public class PersonRunner {
         persons.add(person4);
 
 
-//        Collections.sort(persons, new PersonAgeComparator());
-//        //Collections.sort(persons, Comparator.comparing(Person::getAge));
-
         List<Person> sortedByAge = persons.stream()
                 .sorted(Comparator.comparing(Person::getAge))
                 .collect(Collectors.toList());

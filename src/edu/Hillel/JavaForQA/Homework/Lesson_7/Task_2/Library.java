@@ -1,11 +1,8 @@
 package edu.Hillel.JavaForQA.Homework.Lesson_7.Task_2;
 
-import java.sql.SQLOutput;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -33,12 +30,12 @@ public class Library {
 
         List<Author> authors = Arrays.asList(petro, alex);
 
-        List<Book> books = Stream.concat(petro.getBooks().stream(),alex.getBooks().stream()).collect(Collectors.toList());
+        List<Book> books = Stream.concat(petro.getBooks().stream(), alex.getBooks().stream()).collect(Collectors.toList());
 
 
         System.out.println("===== check if some/all book(s) have more than 200 pages =====");
         books.stream()
-                .filter(e -> e.getNumberOfPages()>200).forEach(e -> System.out.println(e));
+                .filter(e -> e.getNumberOfPages() > 200).forEach(e -> System.out.println(e));
 
 
         System.out.println("\n===== find the books with max and min number of pages =====");

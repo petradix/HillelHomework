@@ -9,7 +9,7 @@ public class MainRunner {
 
         PredicateInterface predicateInterface = value -> value > 0;
 
-        ConsumerInterface consumerInterface =  value -> System.out.println(value);
+        ConsumerInterface consumerInterface = value -> System.out.println(value);
 
         Stream.generate(suplierInterface)
                 .limit(10)
@@ -28,7 +28,6 @@ public class MainRunner {
 
 
 }
-
 
 
 //Implement each of main Java Standard
